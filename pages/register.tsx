@@ -22,9 +22,13 @@ export default function RegisterPage() {
     setError("");
 
     const { data, error: signUpError } = await supabase.auth.signUp({
-      email,
-      password,
-    });
+  email,
+  password,
+  options: {
+    emailRedirectTo: "https://qyou-bracelet.vercel.app", // ganti sesuai domain deploy
+  },
+});
+
 
     if (signUpError) {
       setError(signUpError.message);
