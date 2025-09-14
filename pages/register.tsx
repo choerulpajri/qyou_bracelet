@@ -25,7 +25,7 @@ export default function RegisterPage() {
   email,
   password,
   options: {
-    emailRedirectTo: "https://qyou-bracelet.vercel.app", // ganti sesuai domain deploy
+    emailRedirectTo: "https://qyou.vercel.app/confirm-email", // ganti sesuai domain deploy
   },
 });
 
